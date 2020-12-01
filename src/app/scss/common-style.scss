@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: 479px) { @content;}
+  }
+  @else if $media == wide-handhelds {
+    @media only screen and (max-width: 767px) { @content; }
+  }
+  @else if $media == tablets {
+    @media only screen and (max-width: 959px) { @content; }
+  }
+}
+
+$brand-color-main: #0B5640;
+$brand-color-secondary: #F7F7F7;
+$text-color: #2E2E2E;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: $text-color;
+}
+a {
+  text-decoration: none;
+}
+
+
+
+.btn {
+  display: inline-block;
+  background: $brand-color-main;
+  border-radius: 20px;
+  color: #fff;
+  padding: 0.6rem 3rem;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+
+  &:hover {
+    opacity: .9;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background: darken($brand-color-secondary, 10%);
+    color: #111;
+  }
+}
+

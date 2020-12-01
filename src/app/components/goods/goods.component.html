@@ -1,0 +1,15 @@
+<div class="goods">
+  <div class="item" *ngFor="let item of itemsInfo">
+    <i class="fab fa-vimeo-v logo"></i>
+    <img [src]="item.url" alt="img">
+    <span class="title">{{item.title}}</span>
+  </div>
+
+  <div class="item" >
+    <i class="fas fa-plus-circle"></i>
+    <span class="preferences">Add your preferences</span>
+  </div>
+</div>
+<div class="wrap-btn">
+  <button class="btn">Price list</button>
+</div>

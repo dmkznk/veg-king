@@ -1,0 +1,44 @@
+<div class="container">
+  <h2>Contact with us</h2>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+    <div class="wrap">
+      <div class="form-control"
+           [ngClass]="{invalid: form.get('name').touched && form.get('name').invalid}">
+        <input type="text" formControlName="name" placeholder="Name">
+        <div *ngIf="form.get('name').touched && form.get('name').invalid"
+             class="validation">
+          <small *ngIf="form.get('name').errors.required">
+            Please enter your name
+          </small>
+        </div>
+      </div>
+
+      <div class="form-control"
+           [ngClass]="{invalid: form.get('email').touched && form.get('email').invalid}">
+        <input type="email" formControlName="email" placeholder="Email">
+        <div *ngIf="form.get('email').touched && form.get('email').invalid"
+             class="validation">
+          <small *ngIf="form.get('email').errors.required">
+            Please enter email
+          </small>
+          <small *ngIf="form.get('email').errors.email">
+            Please enter valid email
+          </small>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-control notes">
+      <textarea type="text" formControlName="notes" placeholder="Notes"></textarea>
+    </div>
+
+    <button
+      class="btn"
+      [disabled]="form.invalid"
+      type="submit">
+      Send
+    </button>
+  </form>
+</div>

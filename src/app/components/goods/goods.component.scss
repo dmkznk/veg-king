@@ -1,0 +1,60 @@
+@import "src/app/scss/common-style";
+
+.goods {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .item {
+    background-color: $brand-color-secondary;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 10px;
+    height: 250px;
+    width: 250px;
+    cursor: pointer;
+    transition: .5s all ease;
+
+    .logo {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-size: 1.7rem;
+      color: $brand-color-main;
+      display: none;
+    }
+
+    img {
+      height: 180px;
+      width: 180px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 30px #14453141;
+
+      .logo  {
+        display: block;
+      }
+    }
+
+    i {
+      color: darken($brand-color-secondary, 30%);
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .preferences {
+      color: darken($brand-color-secondary, 30%);
+    }
+  }
+}
+.wrap-btn {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+

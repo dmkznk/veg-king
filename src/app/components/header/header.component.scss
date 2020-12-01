@@ -1,0 +1,67 @@
+@import "../../scss/common-style";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    height: 40px;
+    width: 220px;
+  }
+
+  .languages {
+    a {
+      margin-left: 10px;
+      font-family: 'Roboto', medium, sans-serif;
+      color: darken($brand-color-secondary, 20%);
+    }
+
+    .logo {
+      position: absolute;
+    }
+
+    .active {
+      color: $brand-color-main;
+    }
+  }
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 100px 0;
+
+  h1 {
+    font-family: 'Nunito', sans-serif;
+    color: $brand-color-main;
+    font-size: 2.3rem;
+    font-weight: bold;
+  }
+
+  p {
+    margin: 25px 0;
+  }
+
+  .map {
+    position: relative;
+    overflow: hidden;
+    border-radius: 100px;
+
+    .logo {
+      position: absolute;
+      i {
+        color: #FBA512;
+      }
+    }
+
+    .animate {
+      transform: translateY(-20px);
+      opacity: 0;
+      transition: 2s ease;
+    }
+  }
+}
+
+
+

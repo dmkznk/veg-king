@@ -1,0 +1,57 @@
+@import "src/app/scss/common-style.scss";
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    font-size: 1.8rem;
+    margin: 50px 0;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .wrap {
+      display: flex;
+      .form-control {
+        margin: 0 30px 60px 30px;
+      }
+    }
+
+    .form-control {
+      &.notes {
+        width: 100%;
+        padding: 0 30px;
+        textarea {
+          width: 100%;
+        }
+      }
+      margin-bottom: 40px;
+
+      &.invalid {
+        color: red;
+        input {
+          color: red;
+        }
+      }
+
+      .validation {
+        color: red;
+      }
+    }
+    input, textarea {
+      outline: none;
+      border: none;
+      font-size: 1rem;
+      border-bottom: 2px solid darken($brand-color-secondary, 20%);
+    }
+    textarea {
+      resize: none;
+      font-family: inherit;
+      font-size: inherit;
+    }
+  }
+}
