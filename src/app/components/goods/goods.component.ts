@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {GoodsApiService} from '../../services/goods-api.service';
-import {ItemInfo} from '../../interfaces/interfaces';
+import {ItemInfoInterface} from '../../interfaces/interfaces';
 
 @Component({
   selector: 'app-goods',
@@ -9,7 +9,7 @@ import {ItemInfo} from '../../interfaces/interfaces';
 })
 export class GoodsComponent implements OnInit {
 
-  public itemsInfo: Array<ItemInfo>;
+  public itemsInfo: Array<ItemInfoInterface>;
 
   constructor(private goodsApiService: GoodsApiService) { }
 

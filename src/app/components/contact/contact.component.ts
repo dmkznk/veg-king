@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {VisitorInfo} from '../../interfaces/interfaces';
+import {VisitorInfoInterface} from '../../interfaces/interfaces';
 
 @Component({
   selector: 'app-contact',
@@ -31,7 +31,7 @@ export class ContactComponent implements OnInit {
 
   public submit(): void {
     if (this.form.valid) {
-      const visitorInfo: VisitorInfo = this.form.value;
+      const visitorInfo: VisitorInfoInterface = this.form.value;
       this.form.reset();
     }
   }

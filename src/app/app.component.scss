@@ -1,0 +1,12 @@
+@import "scss/common-style";
+
+.wrapper {
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  @include respond-to(handhelds) {
+    margin: 10px auto 0 auto;
+    padding: 0 .5rem;
+  }
+}

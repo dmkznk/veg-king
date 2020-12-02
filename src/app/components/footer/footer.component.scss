@@ -1,0 +1,67 @@
+@import "src/app/scss/common-style.scss";
+
+.footer {
+  background-color: $brand-color-secondary;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  margin-top: 100px;
+  color: $brand-color-main;
+  font-size: .8rem;
+  @include respond-to(handhelds) {
+    font-size: .6rem;
+    padding: 0 20px;
+    margin-top: 50px;
+  }
+
+  a {
+    color: $brand-color-main;
+  }
+
+  .contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $brand-color-main;
+    padding: 20px 0 10px 0;
+    @include respond-to(handhelds) {
+      flex-direction: column;
+      position: relative;
+    }
+
+    .about a {
+      margin: 0 5px;
+    }
+
+    .social-media  {
+      i {
+        font-size: 1.3rem;
+        margin: 0 5px;
+        @include respond-to(handhelds) {
+          margin: 0 10px;
+        }
+      }
+
+      @include respond-to(handhelds) {
+        margin-top: 20px;
+      }
+    }
+
+    .address {
+      @include respond-to(handhelds) {
+        position: absolute;
+        bottom: -25%;
+        display: flex;
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    margin: 10px;
+    @include respond-to(handhelds) {
+      margin-top: 30px;
+    }
+  }
+}

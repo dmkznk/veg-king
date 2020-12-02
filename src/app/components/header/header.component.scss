@@ -4,9 +4,22 @@
   display: flex;
   justify-content: space-between;
 
-  img {
-    height: 40px;
-    width: 220px;
+  .logo {
+    img {
+      height: 40px;
+      width: 220px;
+      @include respond-to(tablets) {
+        display: none;
+      }
+    }
+    i {
+      display: none;
+      @include respond-to(tablets) {
+        display: block;
+        color: $brand-color-main;
+        font-size: 1.7rem;
+      }
+    }
   }
 
   .languages {
@@ -14,10 +27,6 @@
       margin-left: 10px;
       font-family: 'Roboto', medium, sans-serif;
       color: darken($brand-color-secondary, 20%);
-    }
-
-    .logo {
-      position: absolute;
     }
 
     .active {
@@ -31,22 +40,56 @@
   align-items: center;
   justify-content: space-between;
   margin: 100px 0;
-
-  h1 {
-    font-family: 'Nunito', sans-serif;
-    color: $brand-color-main;
-    font-size: 2.3rem;
-    font-weight: bold;
+  @include respond-to(tablets) {
+    display: block;
+    margin: 20px 0;
   }
 
-  p {
-    margin: 25px 0;
+  .info {
+    @include respond-to(tablets) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-family: 'Nunito', sans-serif;
+      color: $brand-color-main;
+      font-size: 2.3rem;
+      font-weight: bold;
+      @include respond-to(handhelds) {
+        text-align: center;
+        font-size: 1.6rem;
+      }
+    }
+
+    p {
+      margin: 25px 0;
+      @include respond-to(handhelds) {
+        text-align: center;
+        font-size: .7rem;
+        margin: 15px 0;
+      }
+    }
   }
 
   .map {
     position: relative;
-    overflow: hidden;
-    border-radius: 100px;
+    height: 450px;
+    width: 450px;
+    background-image: url(../../../assets/images/map.svg);
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include respond-to(handhelds) {
+      height: 300px;
+      width: 300px;
+      margin: 0 auto;
+    }
+    @include respond-to(tablets) {
+      margin: 0 auto;
+    }
 
     .logo {
       position: absolute;

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Review} from '../../interfaces/interfaces';
-import {reviews} from './reviews-data';
+import {ReviewInterface} from '../../interfaces/interfaces';
+import {reviews} from '../../data-static/reviews-data';
 
 @Component({
   selector: 'app-reviews',
@@ -9,7 +9,7 @@ import {reviews} from './reviews-data';
 })
 export class ReviewsComponent implements OnInit {
 
-  public reviews: Array<Review>;
+  public reviews: Array<ReviewInterface>;
 
   constructor() { }
 

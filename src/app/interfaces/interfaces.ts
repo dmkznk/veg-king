@@ -1,5 +1,21 @@
-export interface ItemInfo {
+export interface ItemInfoInterface {
   title: string;
   url: string;
-  id?: number;
+}
+
+export interface ReviewInterface {
+  text: string;
+  imageUrl: string;
+  name: string;
+}
+
+export interface VisitorInfoInterface {
+  name: string;
+  email: string;
+  notes?: string;
+}
+
+export interface CityCoordsInterface {
+  x: number;
+  y: number;
 }

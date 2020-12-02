@@ -9,14 +9,12 @@ import {map} from 'rxjs/operators';
 })
 export class GoodsApiService {
 
-  private apiUrl: string = environment.apiUrl;
-
   constructor(private http: HttpClient) { }
 
   public getGoods(): Observable<any> {
-    return this.http.get(this.apiUrl)
-      .pipe(map((response: {[key: string]: any}[]) =>
-      response.map(obj => ({title: obj.title, url: obj.media[0].url}))
+    return this.http.get(environment.apiUrl)
+      .pipe(map((response: Array<{[key: string]: any}>) =>
+      response.map(resItem => ({title: resItem.title, url: resItem.media[0].url}))
     ));
   }
 }
